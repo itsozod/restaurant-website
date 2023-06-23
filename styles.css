@@ -35,6 +35,6 @@ body:before {
     font-size: 18px;
     cursor: pointer;
 }
-#button:active {
+#button.active {
     background-image: linear-gradient(lightblue, lightpink);
 }
