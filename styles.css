@@ -37,6 +37,10 @@ body:before {
     position: relative;
     background-color: brown;
 }
+.whole-container {
+    display: flex;
+    flex-direction: column;
+}
 #button-home, #button-menu, #button-contact {
     margin: 20px;
     border: none;
@@ -52,7 +56,7 @@ body:before {
   border-radius: 10px;
 }
 #main {
-    max-width: 700px;
+    max-width: 550px;
     position: relative;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px;
@@ -115,5 +119,28 @@ strong {
     color: brown;
     font-weight: 600;
     font-size: 18px;
+}
+
+.whole-container2 {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+.coffee-container {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.coffee-card {
+    margin: 10px;
+}
+.coffee-name {
+    text-align: center;
+    color: white;
+}
+.coffee {
+    width: 200px;
+    border-radius: 50px;
 }
 
