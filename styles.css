@@ -25,7 +25,6 @@ body:before {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    /* min-height: 100vh; */
     position: relative;
 }
 #header {
@@ -37,9 +36,16 @@ body:before {
     position: relative;
     background-color: brown;
 }
-.whole-container {
+.welcome-container {
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slide-in .5s forwards;
+  }
+@keyframes slide-in {
+    0% {transform: translateX(-20px); opacity: 0;}
+    100% {transform: translateX(0); opacity: 1;}
 }
 #button-home, #button-menu, #button-contact {
     margin: 20px;
@@ -54,9 +60,10 @@ body:before {
 #button-contact.active {
   background-image: linear-gradient(lightblue, lightpink);
   border-radius: 10px;
+  border-bottom: 4px solid orange;
 }
 #main {
-    max-width: 550px;
+    max-width: 520px;
     position: relative;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px;
@@ -120,27 +127,41 @@ strong {
     font-weight: 600;
     font-size: 18px;
 }
-
-.whole-container2 {
+  .coffee-container {
     display: flex;
-    flex-direction: column;
-    display: none;
-}
-.coffee-container {
-    display: flex;
-    margin: 10px;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    display: none;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slide .5s forwards;
+  }
+  @keyframes slide {
+    0% {transform: translateY(-30px); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
 }
-.coffee-card {
+  
+  .coffee-card {
+    width: 230px; /* Adjust the width as needed */
     margin: 10px;
-}
-.coffee-name {
     text-align: center;
+  }
+  
+  .coffee-name {
     color: white;
-}
-.coffee {
+    margin-top: 10px;
+  }
+  
+  .coffee {
+    margin-top: 10px;
     width: 200px;
-    border-radius: 50px;
-}
+    object-fit: cover;
+    border-radius: 20px;
+    height: 200px;
+  }
+  .price {
+    font-size: 20px;
+    color: white;
+  }
+  
 

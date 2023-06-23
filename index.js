@@ -2,8 +2,10 @@ const buttons = document.querySelectorAll('#button-home, #button-menu, #button-c
 const homeBtn = document.querySelector('#button-home');
 const menuBtn = document.querySelector('#button-menu');
 const contactBtn = document.querySelector('#button-contact');
-const wholeContainer = document.querySelector('.whole-container');
-const wholeContainer2 = document.querySelector('.whole-container2');
+// const wholeContainer = document.querySelector('.whole-container');
+// const wholeContainer2 = document.querySelector('.whole-container2');
+const welcomeContainer = document.querySelector('.welcome-container');
+const coffeeContainer = document.querySelector('.coffee-container');
 
 
 buttons.forEach((button) => {
@@ -16,13 +18,13 @@ buttons.forEach((button) => {
     });
 });
 homeBtn.addEventListener('click', () => {
-    wholeContainer.style.display = 'flex';
-    wholeContainer2.style.display = 'none';
+    welcomeContainer.style.display = 'flex';
+    coffeeContainer.style.display = 'none';
 });
 
 menuBtn.addEventListener('click', () => {
-    wholeContainer.style.display = 'none';
-    wholeContainer2.style.display = 'flex';
+    welcomeContainer.style.display = 'none';
+    coffeeContainer.style.display = 'flex';
 })
 
 
