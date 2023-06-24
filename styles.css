@@ -34,7 +34,26 @@ body:before {
     flex-direction: column;
     width: 100%;
     position: relative;
-    background-color: brown;
+    background-color: rgba(165, 42, 42, 0.7);
+    font-family: 'Caprasimo', cursive;
+
+}
+.coffee-land {
+    margin-top: 17px;
+    margin-right: 10px;
+}
+.three-d {
+    display: flex;
+}
+.coffee-d {
+    margin-top: 10px;
+    width: 50px;
+    animation: rotate 4s linear infinite;
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 .welcome-container {
     display: flex;
@@ -54,6 +73,7 @@ body:before {
     background: none;
     font-size: 20px;
     cursor: pointer;
+    font-family: 'Caprasimo', cursive;
 }
 #button-home.active,
 #button-menu.active,
@@ -69,6 +89,7 @@ body:before {
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 .welcome {
     color: white;
@@ -97,7 +118,7 @@ body:before {
 .intro {
     color: white;
     padding: 10px;
-    font-size: 20px;
+    font-size: 18px;
 }
 strong {
     color: red;
@@ -115,7 +136,7 @@ strong {
     background-image: linear-gradient(lightcoral, lightgrey);
     padding: 8px;
     width: 300px;
-    height: 320px;
+    height: 345px;
     border-radius: 10px;
 }
 .work-intro {
@@ -140,9 +161,8 @@ strong {
     0% {transform: translateY(-30px); opacity: 0;}
     100% {transform: translateY(0); opacity: 1;}
 }
-  
   .coffee-card {
-    width: 230px; /* Adjust the width as needed */
+    width: 230px;
     margin: 10px;
     text-align: center;
   }
@@ -163,5 +183,49 @@ strong {
     font-size: 20px;
     color: white;
   }
+.location-container {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: come .5s forwards;
+}
+@keyframes come {
+    0% {transform: translateY(-30px); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+.loc-intro {
+    text-align: center;
+    color: white;
+}
+.dushanbe {
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+}
+.dushanbe-img {
+    width: 100%;
+    margin-top: 15px;
+    object-fit: cover;
+}
+@media screen and (max-width: 349px){
+    #button-home, #button-menu, #button-contact {
+        margin: 5px;
+    } 
+}
+@media screen and (max-width: 326px){
+    #main {
+        max-width: 300px;
+    }
+}
+@media screen and (max-width: 304px){
+    #main {
+        max-width: 270px;
+    }
+}
+
+
+
   
 
